@@ -465,6 +465,26 @@ header .group .socialsResume .socialsList li a:hover {
   margin-bottom: 25px;
 }
 
+.back-to-top {
+  float: right;
+  position: fixed;
+  bottom: 35px;
+  margin-right: 20px;
+  right: 0;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  background-color: #bf0383;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.back-to-top:hover {
+  background: #8b0d88;
+}
+
 footer {
   background-color: #bf0383;
 }
