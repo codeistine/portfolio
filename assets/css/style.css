@@ -64,6 +64,10 @@ h2 {
     display: none;
     width: 210px;
   }
+  .sideMenu .show-links {
+    display: block;
+    left: 0;
+  }
 }
 @media (min-width: 991px) {
   .sideMenu:hover {
@@ -140,12 +144,16 @@ h2 {
   left: 30px;
   font-weight: 300;
 }
-.sideMenu .sideMenuShow {
-  left: 0;
-}
 .sideMenu i.fa-solid.fa-arrow-down-long {
   line-height: 1.2;
   font-size: 2rem;
+}
+
+@media all and (max-width: 990px) {
+  .show-links {
+    display: block !important;
+    left: 0;
+  }
 }
 
 .outerWrapper {
@@ -164,6 +172,32 @@ h2 {
   padding: 0 33px;
   max-width: 1140px;
   margin: 0 auto;
+}
+
+.toggle {
+  float: right;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.toggle:hover {
+  transform: rotate(90deg);
+}
+@media all and (min-width: 991px) {
+  .toggle {
+    display: none;
+  }
+}
+@media all and (max-width: 990px) {
+  .toggle {
+    display: block;
+    padding: 20px;
+  }
+}
+.toggle i.fa-solid.fa-bars {
+  font-size: 20px;
+  border: 1px solid;
+  padding: 7px;
+  color: #bf0383;
 }
 
 header {
@@ -206,6 +240,11 @@ header .group {
   align-items: center;
   justify-content: center;
 }
+@media all and (max-width: 990px) {
+  header .group {
+    display: block !important;
+  }
+}
 header .group .col:first-of-type {
   flex: 0 0 50%;
   padding: 0 15px;
@@ -213,11 +252,6 @@ header .group .col:first-of-type {
   justify-content: center;
   width: 100%;
   position: relative;
-}
-@media all and (max-width: 990px) {
-  header .group .col:first-of-type {
-    display: block !important;
-  }
 }
 header .group .col:last-of-type {
   flex: 0 0 50%;
@@ -284,7 +318,7 @@ header .group .socialsResume {
   margin-top: 20px;
 }
 @media all and (max-width: 990px) {
-  header .group .socialsResume .socialsResume {
+  header .group .socialsResume {
     justify-content: center;
   }
 }

@@ -66,6 +66,10 @@ h2 {
     @media all and (max-width: 990px) {
         display: none;
         width: 210px;
+        .show-links {
+            display: block;
+            left: 0;
+        }
     }
     &:hover {
         @media (min-width: 991px) {
@@ -147,15 +151,17 @@ h2 {
         left: 30px;
         font-weight: 300;
     }
-    .sideMenuShow {
-        left: 0;
-    }
     i.fa-solid.fa-arrow-down-long {
         line-height: 1.2;
         font-size: 2rem;
     }
 }
-
+.show-links {
+    @media all and (max-width: 990px) {
+        display: block !important;
+        left: 0;
+    }
+}
 
 .outerWrapper {
     width: calc(100% - 90px);
@@ -170,6 +176,27 @@ h2 {
     padding: 0 33px;
     max-width: 1140px;
     margin: 0 auto;
+}
+.toggle {
+    float: right;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover {
+        transform: rotate(90deg);
+    }
+    @media all and (min-width: 991px) {
+        display: none;
+    }
+    @media all and (max-width: 990px) {
+        display: block;
+        padding: 20px;
+    }
+    i.fa-solid.fa-bars {
+        font-size: 20px;
+        border: 1px solid;
+        padding: 7px;
+        color: $primaryColor;
+    }
 }
 header {
     height: 100vh;
@@ -221,6 +248,9 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        @media all and (max-width: 990px) {
+            display: block !important;
+        }
        .col:first-of-type {
             -webkit-box-flex: 0;
             -ms-flex: 0 0 50%;
@@ -234,9 +264,6 @@ header {
             justify-content: center;
             width: 100%;
             position: relative;
-            @media all and (max-width: 990px) {
-                display: block !important;
-            }
        }
        .col:last-of-type {
             -webkit-box-flex: 0;
@@ -298,9 +325,7 @@ header {
             align-items: center;
             margin-top: 20px;
             @media all and (max-width: 990px) {
-                .socialsResume {
-                    justify-content: center;
-                }
+                justify-content: center;
             }
             .socialsList {
                 display: flex;
