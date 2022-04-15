@@ -63,6 +63,26 @@ h2 {
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     z-index: 10;
+    @media all and (max-width: 990px) {
+        display: none;
+        width: 210px;
+    }
+    &:hover {
+        @media (min-width: 991px) {
+            width: 220px;
+        }
+        .navItemName {
+            @media all and (min-width: 991px) {
+                display: block;
+            }
+       }
+    }
+    .navItemName {
+        @media (min-width: 991px) {
+            display: none;
+        }
+    }
+    
     a {
         color: white;
     }
@@ -97,6 +117,11 @@ h2 {
             box-shadow: 0 14px 28px rgb(0 0 0 / 20%);
             width: 120px;
         }
+        .navItemName {
+            @media (min-width: 991px) {
+                display: none;
+            }      
+        }
     }
     p {
         text-align: center;
@@ -130,42 +155,16 @@ h2 {
         font-size: 2rem;
     }
 }
-@media (min-width: 991px) {
-    .navItemName {
-        display: none;
-    }
-    .sideMenu:hover .navItemName {
-        display: block;
-    }
-    .sideMenu:hover {
-        width: 220px;
-    }
-}
-@media all and (max-width: 990px) {
-    .sideMenu {
-        display: none;
-        width: 210px;
-    }
-    header .group {
-        display: block !important;
-    }
-    .outerWrapper {
-        width: 100% !important;
-        margin-left: 0px !important;
-    }
-    header .group .col img {
-        width: 255px !important;
-        height: 290px !important;
-    }
-    header .group .col:last-of-type {
-        text-align: center;
-        padding-top: 40px !important;
-    }
-}
+
+
 .outerWrapper {
     width: calc(100% - 90px);
     margin-left: 90px;
     overflow: hidden;
+    @media all and (max-width: 990px) {
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
 }
 .innerWrapper {
     padding: 0 33px;
@@ -204,6 +203,9 @@ header {
         flex: 0 0 50%;
         padding: 0 15px;
         width: 100%;
+        @media all and (max-width: 990px) {
+            padding: 0px !important;
+        }
        .greeting {
             letter-spacing: 1px;
             font-size: 1rem;
@@ -232,6 +234,9 @@ header {
             justify-content: center;
             width: 100%;
             position: relative;
+            @media all and (max-width: 990px) {
+                display: block !important;
+            }
        }
        .col:last-of-type {
             -webkit-box-flex: 0;
@@ -239,6 +244,10 @@ header {
             flex: 0 0 50%;
             padding: 0 15px;
             width: 100%;
+            @media all and (max-width: 990px) {
+                text-align: center;
+                padding-top: 40px !important;
+            }
        }
         .col img {
             border-radius: 35%;
@@ -249,6 +258,10 @@ header {
             box-shadow: 12px 0 #f1008038, 24px 0 #f1008052, 36px 0 #f100802e;
             vertical-align: middle;
             object-fit: cover;
+            @media all and (max-width: 990px) {
+                width: 255px !important;
+                height: 290px !important;
+            }
         }
         .bio {
             letter-spacing: 1px;
@@ -275,12 +288,20 @@ header {
             &:hover {
                 background-color: $thirdColor;
             }
+            @media all and (max-width: 990px) {
+                margin-right: 0px;
+            }
         }
         .socialsResume {
             display: flex;
             flex-direction: row;
             align-items: center;
             margin-top: 20px;
+            @media all and (max-width: 990px) {
+                .socialsResume {
+                    justify-content: center;
+                }
+            }
             .socialsList {
                 display: flex;
                 flex-direction: row;
@@ -306,37 +327,13 @@ header {
         }
     }
 }
-
-@media all and (max-width: 990px) {
-    .socialsResume {
-        justify-content: center;
-    }
-    header .group a.resumeLink {
-        margin-right: 0px;
-    }
-    .heroDescription {
-        padding: 0px !important;
-    }
-    #about p{
-        text-align: justify;
-    }
-    #projects .group {
-        display: block !important;
-    }
-    #skills .skillsGrid {
-        grid-template-columns: repeat(auto-fill, minmax(59px, 0fr)) !important;
-    }
-    #projects .container {
-        background: none;
-        padding: 20px;
-    }
-    h3 {
-        padding-top: 20px;
+#about {
+    p {
+        @media all and (max-width: 990px) {
+            text-align: justify;
+        }
     }
 }
-
-// 
-
 
 // skills
 #skills {
@@ -349,6 +346,9 @@ header {
         grid-row-gap: 50px;
         text-align: center;
         font-size: 0.7rem;
+        @media all and (max-width: 990px) {
+            grid-template-columns: repeat(auto-fill, minmax(59px, 0fr)) !important;
+        }
     }
     img {
         width: 35px;
@@ -373,6 +373,17 @@ header {
 }
 // projects
 #projects {
+    h3 {
+        @media all and (max-width: 990px) {
+            padding-top: 20px;
+        }
+    }
+    .container {
+        @media all and (max-width: 990px) {
+            background: none;
+            padding: 20px;
+        }
+    }
     .group {
         display: flex;
         flex-direction: row;
@@ -386,6 +397,9 @@ header {
         transition: all 0.3s ease-in;
         border: 1px solid #eee;
         margin-top: 40px;
+        @media all and (max-width: 990px) {
+            display: block !important;
+        }
         &:first-of-type {
             margin-top: 0px;
         }
