@@ -175,9 +175,12 @@ h2 {
 }
 
 .toggle {
-  float: right;
+  display: block;
+  padding: 7px;
+  position: fixed;
+  right: 0;
+  background: #bf0383;
   cursor: pointer;
-  transition: all 0.3s linear;
 }
 .toggle:hover {
   transform: rotate(90deg);
@@ -190,14 +193,14 @@ h2 {
 @media all and (max-width: 990px) {
   .toggle {
     display: block;
-    padding: 20px;
+    padding: 7px;
   }
 }
 .toggle i.fa-solid.fa-bars {
   font-size: 20px;
   border: 1px solid;
   padding: 7px;
-  color: #bf0383;
+  color: #fff;
 }
 
 header {
@@ -361,14 +364,15 @@ header .group .socialsResume .socialsList li a:hover {
   text-align: center;
   font-size: 0.7rem;
 }
-@media all and (max-width: 990px) {
+@media all and (max-width: 767px) {
   #skills .skillsGrid {
     grid-template-columns: repeat(auto-fill, minmax(59px, 0fr)) !important;
   }
 }
 #skills img {
-  width: 35px;
+  width: auto;
   height: 35px;
+  padding-bottom: 5px;
 }
 #skills .skillsGrid li {
   background-color: white;
