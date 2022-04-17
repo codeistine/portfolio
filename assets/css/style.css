@@ -405,6 +405,9 @@ header .group .socialsResume .socialsList li a:hover {
   }
 }
 
+#projects img {
+  width: 75%;
+}
 @media all and (max-width: 990px) {
   #projects h3 {
     padding-top: 20px;
@@ -441,6 +444,9 @@ header .group .socialsResume .socialsList li a:hover {
 }
 #projects .group .col {
   flex: 1;
+}
+#projects .group .col:first-of-type {
+  text-align: center;
 }
 #projects .group span.techStack {
   color: #bf0383;

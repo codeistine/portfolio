@@ -417,6 +417,9 @@ header {
 }
 // projects
 #projects {
+    img {
+        width: 75%;
+    }
     h3 {
         @media all and (max-width: 990px) {
             padding-top: 20px;
@@ -454,6 +457,9 @@ header {
         }
         .col {
             flex: 1;
+            &:first-of-type {
+                text-align: center;
+            }
         } 
         span.techStack {
             color: $primaryColor;
