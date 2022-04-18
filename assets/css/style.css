@@ -271,7 +271,7 @@ header .group .col:first-of-type {
 @media all and (max-width: 767px) {
   header .group .col:first-of-type {
     flex: auto;
-    padding: 0 15px;
+    padding: 0;
   }
 }
 header .group .col:last-of-type {
@@ -282,7 +282,7 @@ header .group .col:last-of-type {
 @media all and (max-width: 767px) {
   header .group .col:last-of-type {
     text-align: center;
-    padding-top: 40px 0 0;
+    padding: 40px 0 0;
   }
 }
 header .group .col img {
