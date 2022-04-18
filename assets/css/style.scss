@@ -385,7 +385,13 @@ header {
         text-align: center;
         font-size: 0.7rem;
         @media all and (max-width: 767px) {
-            grid-template-columns: repeat(auto-fill, minmax(59px, 0fr)) !important;
+            // grid-template-columns: repeat(auto-fill, minmax(59px, 0fr)) !important;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            grid-column-gap: 5px;
         }
     }
     img {

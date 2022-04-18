@@ -378,7 +378,12 @@ header .group .socialsResume .socialsList li a:hover {
 }
 @media all and (max-width: 767px) {
   #skills .skillsGrid {
-    grid-template-columns: repeat(auto-fill, minmax(59px, 0fr)) !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-column-gap: 5px;
   }
 }
 #skills img {
