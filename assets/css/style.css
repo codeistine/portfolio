@@ -268,15 +268,21 @@ header .group .col:first-of-type {
   width: 100%;
   position: relative;
 }
+@media all and (max-width: 767px) {
+  header .group .col:first-of-type {
+    flex: auto;
+    padding: 0 15px;
+  }
+}
 header .group .col:last-of-type {
   flex: 0 0 50%;
   padding: 0 15px;
   width: 100%;
 }
-@media all and (max-width: 990px) {
+@media all and (max-width: 767px) {
   header .group .col:last-of-type {
     text-align: center;
-    padding-top: 40px !important;
+    padding-top: 40px 0 0;
   }
 }
 header .group .col img {
@@ -290,7 +296,7 @@ header .group .col img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media all and (max-width: 990px) {
+@media all and (max-width: 767px) {
   header .group .col img {
     width: 255px !important;
     height: 290px !important;
