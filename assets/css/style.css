@@ -383,7 +383,8 @@ header .group .socialsResume .socialsList li a:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    grid-column-gap: 5px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
   }
 }
 #skills img {
