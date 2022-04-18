@@ -187,9 +187,9 @@ h2 {
     right: 0;
     background: $primaryColor;
     cursor: pointer;
-    &:hover {
-        transform: rotate(90deg);
-    }
+    // &:hover {
+    //     transform: rotate(90deg);
+    // }
     @media all and (min-width: 991px) {
         display: none;
     }
@@ -366,13 +366,6 @@ header {
                     }
                 }
             }
-        }
-    }
-}
-#about {
-    p {
-        @media all and (max-width: 990px) {
-            text-align: justify;
         }
     }
 }

@@ -187,9 +187,6 @@ h2 {
   background: #bf0383;
   cursor: pointer;
 }
-.toggle:hover {
-  transform: rotate(90deg);
-}
 @media all and (min-width: 991px) {
   .toggle {
     display: none;
@@ -364,12 +361,6 @@ header .group .socialsResume .socialsList li a:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: #8b0d88;
   color: #fff;
-}
-
-@media all and (max-width: 990px) {
-  #about p {
-    text-align: justify;
-  }
 }
 
 #skills .skillsGrid {
