@@ -1,12 +1,21 @@
 // toggle
-
 const navToggle = document.querySelector('.toggle');
 const sideMenu = document.querySelector('.sideMenu');
+const navLink = document.getElementsByTagName('a');
 
 navToggle.addEventListener('click', () => {
-    sideMenu.classList.toggle("show-links");
+  sideMenu.classList.toggle("show-links");
+  sideMenu.classList.remove('hide');
 });
 
+let show = function() { 
+  sideMenu.classList.remove('show-links');
+  sideMenu.classList.toggle("hide");
+ }
+for (var i = navLink.length - 1; i >= 0; --i) {
+  navLink[i].onclick = show;
+
+}
 
 // back to top
 const scrollToTopButton = document.querySelector('.backTop');
