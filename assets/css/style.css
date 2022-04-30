@@ -433,11 +433,6 @@ header .group .socialsResume .socialsList li a:hover {
     padding-top: 20px;
   }
 }
-@media all and (max-width: 990px) {
-  #projects .container {
-    padding: 20px;
-  }
-}
 #projects .group {
   padding: 20px;
   border-radius: 15px;
